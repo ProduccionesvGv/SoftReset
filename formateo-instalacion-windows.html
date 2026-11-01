@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171b1d">
+<meta name="theme-color" id="themeColorMeta" content="#f5f7fb">
+<script id="initialThemeScript">(function(){var t=null;try{var q=new URLSearchParams(window.location.search).get("theme");if(q==="dark"||q==="light"){t=q;try{localStorage.setItem("softreset-theme",t);}catch(e){}}else{t=localStorage.getItem("softreset-theme");}}catch(e){}document.documentElement.dataset.theme=t==="dark"?"dark":"light";})();</script>
 <meta name="description" content="Instalación, formateo y configuración inicial de Windows. SoftReset.">
 <title>Instalación y formateo de Windows | SoftReset</title>
 <style>
@@ -170,13 +171,48 @@
   .features > .feature:last-child { margin-bottom: 12px !important; }
 }
 
+
+/* Barra inferior: mismas medidas, espaciado y proporciones que la home */
+.mobile-bottom-bar{position:fixed;z-index:1000;left:14px;right:14px;bottom:12px;width:auto;max-width:520px;margin-inline:auto;padding:6px;display:flex;align-items:center;gap:4px;overflow:visible;border-radius:22px;background:rgba(8,20,44,.96);border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 38px rgba(2,8,23,.32);backdrop-filter:blur(16px);transition:transform .45s ease,opacity .35s ease,bottom .45s ease}
+.mobile-bottom-bar.auto-hidden{transform:translateY(calc(100% + 24px));opacity:0;pointer-events:none}
+.mobile-bottom-links{min-width:0;flex:1 1 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:center}
+.mobile-bottom-bar a{min-width:0;padding:11px 5px;border-radius:14px;color:#fff;text-align:center;font-size:12.5px;font-weight:800;line-height:1;white-space:nowrap;text-decoration:none}
+.mobile-bottom-bar a:hover,.mobile-bottom-bar a:focus-visible{background:rgba(33,150,243,.15);outline:none}
+.theme-toggle{position:relative;flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:15px;cursor:pointer;color:#0f172a;background:#fff;box-shadow:0 7px 18px rgba(0,0,0,.22);-webkit-tap-highlight-color:transparent;transition:transform .2s ease,color .25s ease,background .25s ease,box-shadow .25s ease}
+.theme-toggle:hover,.theme-toggle:focus-visible{transform:translateY(-1px) rotate(4deg);outline:2px solid rgba(33,150,243,.72);outline-offset:2px}
+.theme-toggle-icon{width:30px;height:30px;display:block;overflow:visible;transition:transform .35s ease}
+html[data-theme="dark"] .theme-toggle{color:#fff;background:#1e293b;box-shadow:0 7px 20px rgba(0,0,0,.42),inset 0 0 0 1px rgba(255,255,255,.08)}
+html[data-theme="dark"] .theme-toggle-icon{transform:rotate(180deg)}
+@media(min-width:620px){.mobile-bottom-bar{left:auto;right:22px;bottom:22px;width:56px;max-width:56px;padding:6px;border-radius:18px}.mobile-bottom-links{display:none}.theme-toggle{flex-basis:44px}}
+@media(max-width:420px){.mobile-bottom-bar{border-radius:21px}.mobile-bottom-bar a{font-size:11px;padding-inline:2px}.theme-toggle{flex-basis:40px;width:40px;height:40px}.theme-toggle-icon{width:27px;height:27px}}
+@media(prefers-reduced-motion:reduce){.mobile-bottom-bar,.theme-toggle,.theme-toggle-icon{transition:none}}
+
+/* Tema claro: conserva las imágenes y adapta fondos, paneles y textos */
+html[data-theme="light"] body{--bg:#f1f3f5;--surface:#ffffff;--surface-glass:rgba(255,255,255,.96);--text:#17212b;--muted:#526171;--line:rgba(20,40,60,.16);background:var(--bg);color:var(--text);color-scheme:light}
+html[data-theme="light"] .header{background:rgba(255,255,255,.94);border-bottom-color:rgba(20,40,60,.12)}
+html[data-theme="light"] .hero{background-color:#e8edf1}
+html[data-theme="light"] .hero:before{background:linear-gradient(90deg,rgba(255,255,255,.16),rgba(255,255,255,.02) 55%,rgba(255,255,255,.12)),linear-gradient(0deg,rgba(18,29,39,.58),rgba(18,29,39,.04) 72%)}
+html[data-theme="light"] .hero-card{background:rgba(255,255,255,.94);border-color:rgba(20,40,60,.15);box-shadow:0 22px 60px rgba(25,45,65,.18)}
+html[data-theme="light"] .hero-card p{color:#526171}
+html[data-theme="light"] .eyebrow{color:#1678b8}
+html[data-theme="light"] .eyebrow:before{background:#249cf2}
+html[data-theme="light"] .feature-photo{background:#e4e9ee}
+html[data-theme="light"] .feature-card{background:rgba(255,255,255,.97);border-color:rgba(20,40,60,.15);box-shadow:0 20px 48px rgba(25,45,65,.15)}
+html[data-theme="light"] .feature-card p{color:#526171}
+html[data-theme="light"] .specs li{color:#202c37}
+html[data-theme="light"] .feature + .feature:before{background:linear-gradient(90deg,transparent,rgba(35,58,78,.2) 18%,rgba(35,58,78,.2) 82%,transparent)}
+html[data-theme="light"] .end{background:#e6eaee;border-top-color:rgba(20,40,60,.12)}
+html[data-theme="light"] .footer{background:#f7f8fa;border-top-color:rgba(20,40,60,.12)}
+html[data-theme="light"] .footer-row{color:#526171}
+html[data-theme="light"] .mobile-bottom-bar{background:rgba(8,20,44,.97)}
+
 </style>
 </head>
 <body>
-<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img src="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset, formateo e instalación de Windows"></a></div></header>
+<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset, formateo e instalación de Windows"></a></div></header>
 <main id="inicio">
 <section class="hero"><div class="wrap"><div class="hero-card"><span class="eyebrow">Formateo e instalación de Windows</span><h1>Tu PC lista para <span>volver a rendir.</span></h1><p>Instalación limpia, preparación del disco y configuración inicial para que vuelvas a trabajar con tu equipo.</p></div></div></section>
-<section class="features" aria-label="Qué incluye el servicio">
+<section class="features" id="servicios" aria-label="Qué incluye el servicio">
 <article class="feature"><div class="feature-photo"><img src="assets/img/instalacion-limpia-windows.jpeg" alt="Versiones de Windows compatibles" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Instalación</span><h2>Windows instalado desde cero</h2><p>Instalamos una copia limpia de Windows y dejamos el sistema preparado para su configuración inicial.</p><ul class="specs"><li>Instalación limpia del sistema operativo</li><li>Formateo del disco según lo acordado</li><li>Preparación de SSD o HDD</li><li>Versión elegida según compatibilidad del equipo</li><li>Preparación para las actualizaciones disponibles</li></ul></div></article>
 <article class="feature"><div class="feature-photo activation-photo"><img src="assets/img/activacion-windows-office-banner.jpg" alt="Windows 11 Pro, Microsoft Office y símbolo de licencia válida" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Activación</span><h2>Activación de Windows con licencia válida</h2><p>Comprobamos el estado de activación y activamos Windows cuando se dispone de una licencia válida compatible.</p><ul class="specs"><li>Verificación del estado de activación</li><li>Uso de la licencia válida disponible</li><li>Sin prometer licencias que no se hayan proporcionado</li></ul></div></article>
 <article class="feature reverse"><div class="feature-photo"><img src="assets/img/configuracion-inicial-equipo.png" alt="Configuración inicial de Windows en una notebook" loading="lazy"></div><div class="feature-card"><span class="eyebrow">Configuración</span><h2>Los ajustes esenciales, revisados</h2><p>Dejamos el sistema configurado y comprobamos el funcionamiento básico antes de dar por terminado el servicio.</p><ul class="specs"><li>Instalación de controladores esenciales disponibles</li><li>Configuración inicial del sistema</li><li>Comprobación básica del funcionamiento</li></ul></div></article>
@@ -184,6 +220,68 @@
 </section>
 <section class="end" id="contacto"><div class="wrap end-cta-wrap"><a class="end-consult-button" href="index.html#contacto">Consultar este servicio <span aria-hidden="true">→</span></a></div></section>
 </main>
+
+
+<nav aria-label="Navegación rápida" class="mobile-bottom-bar">
+  <div class="mobile-bottom-links">
+    <a href="#servicios">Servicios</a>
+    <a href="index.html#planes">Planes</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <button aria-label="Activar modo oscuro" aria-pressed="false" class="theme-toggle" title="Cambiar tema" type="button">
+    <svg aria-hidden="true" class="theme-toggle-icon" focusable="false" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" fill="none" r="12.5" stroke="currentColor" stroke-width="3.5"></circle>
+      <path d="M24 3.5v5M24 39.5v5M3.5 24h5M39.5 24h5M9.5 9.5l3.6 3.6M34.9 34.9l3.6 3.6M38.5 9.5l-3.6 3.6M13.1 34.9l-3.6 3.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3.2"></path>
+    </svg>
+  </button>
+</nav>
+<script>
+(() => {
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-toggle');
+  const meta = document.querySelector('#themeColorMeta');
+  const getTheme = () => root.dataset.theme === 'dark' ? 'dark' : 'light';
+  const applyTheme = (theme, persist = true) => {
+    const value = theme === 'dark' ? 'dark' : 'light';
+    root.dataset.theme = value;
+    const logo = document.querySelector('#softresetThemeLogo');
+    if (logo) logo.src = value === 'dark' ? logo.dataset.logoDark : logo.dataset.logoLight;
+    if (toggle) {
+      toggle.setAttribute('aria-pressed', String(value === 'dark'));
+      toggle.setAttribute('aria-label', value === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+      toggle.title = value === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+    }
+    if (meta) meta.content = value === 'dark' ? '#171b1d' : '#f1f3f5';
+    if (persist) { try { localStorage.setItem('softreset-theme', value); } catch (_) {} }
+  };
+  if (toggle) toggle.addEventListener('click', () => applyTheme(getTheme() === 'dark' ? 'light' : 'dark'));
+  applyTheme(getTheme(), false);
+  window.addEventListener('storage', event => {
+    if (event.key === 'softreset-theme' && (event.newValue === 'light' || event.newValue === 'dark')) applyTheme(event.newValue, false);
+  });
+  window.addEventListener('pageshow', () => {
+    const requested = new URLSearchParams(window.location.search).get('theme');
+    let saved = requested;
+    if (saved !== 'light' && saved !== 'dark') { try { saved = localStorage.getItem('softreset-theme'); } catch (_) {} }
+    if (saved === 'light' || saved === 'dark') applyTheme(saved, false);
+  });
+
+  const bar = document.querySelector('.mobile-bottom-bar');
+  if (!bar) return;
+  let hideTimer = null, showTimer = null;
+  const clearTimers = () => { if (hideTimer) clearTimeout(hideTimer); if (showTimer) clearTimeout(showTimer); hideTimer = showTimer = null; };
+  const showAndRestart = () => {
+    clearTimers(); bar.classList.remove('auto-hidden');
+    hideTimer = setTimeout(() => {
+      bar.classList.add('auto-hidden'); hideTimer = null;
+      showTimer = setTimeout(() => { bar.classList.remove('auto-hidden'); showTimer = null; showAndRestart(); }, 3000);
+    }, 20000);
+  };
+  ['pointerdown','touchstart','keydown','scroll','wheel','pointermove'].forEach(name => window.addEventListener(name, showAndRestart, {passive:true}));
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) showAndRestart(); });
+  showAndRestart();
+})();
+</script>
 
 </body>
 </html>

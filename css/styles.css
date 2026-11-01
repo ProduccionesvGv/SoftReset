@@ -9787,3 +9787,390 @@ body.formateo-page.services-vertical-page .services-intro {
 @media (prefers-reduced-motion: reduce) {
   .mobile-bottom-bar { transition: opacity .2s ease !important; }
 }
+
+/* SoftReset: tarjetas de servicios en blanco para el tema claro de la Home */
+html[data-theme="light"] #servicios .arc-service-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f7f9fc 68%, #eef3f8 100%) !important;
+  border: 1px solid #dce4ed !important;
+  box-shadow: 0 18px 42px rgba(25, 43, 65, .12) !important;
+  color: #172334 !important;
+}
+html[data-theme="light"] #servicios .arc-service-card::before {
+  background: linear-gradient(90deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,.94) 48%, rgba(255,255,255,.64) 100%),
+              radial-gradient(circle at 86% 44%, rgba(33,150,243,.08), transparent 34%) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-bg {
+  opacity: .12 !important;
+  filter: saturate(.78) contrast(.96) brightness(1.08) !important;
+}
+html[data-theme="light"] #servicios .arc-service-content h3 {
+  color: #142238 !important;
+}
+html[data-theme="light"] #servicios .arc-service-content p {
+  color: #526174 !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li {
+  color: #26364a !important;
+  background: rgba(255,255,255,.88) !important;
+  border-color: #dce5ee !important;
+  box-shadow: 0 2px 6px rgba(22,42,64,.035) !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li::before {
+  color: #299b5a !important;
+}
+html[data-theme="light"] #servicios .arc-service-link {
+  color: #1d3148 !important;
+}
+html[data-theme="light"] #servicios .arc-service-link span {
+  color: #258b54 !important;
+  border-color: rgba(41,155,90,.42) !important;
+  background: rgba(41,155,90,.07) !important;
+}
+html[data-theme="light"] #servicios .arc-service-link:hover span {
+  color: #fff !important;
+  border-color: #299b5a !important;
+  background: #299b5a !important;
+}
+html[data-theme="light"] #servicios .service-priority-badge {
+  color: #0875b9 !important;
+  background: #e8f5ff !important;
+  border-color: #a9dcfb !important;
+}
+html[data-theme="light"] #servicios .arc-service-card:hover,
+html[data-theme="light"] #servicios .arc-service-card:focus-within,
+html[data-theme="light"] #servicios .arc-service-card:focus-visible,
+html[data-theme="light"] #servicios .arc-service-card.is-active {
+  border-color: #b8d9ee !important;
+  box-shadow: 0 24px 48px rgba(25, 43, 65, .16) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card:focus-visible {
+  outline-color: rgba(33,150,243,.6) !important;
+}
+
+/* Ajuste visual del tema claro para los dos cuadros principales de servicios */
+html[data-theme="light"] #servicios .arc-service-card {
+  background: linear-gradient(145deg, #edf3f8 0%, #e5edf4 48%, #dce7f0 100%) !important;
+  border: 1px solid #c7d6e3 !important;
+  box-shadow: 0 20px 44px rgba(27, 48, 70, .16), inset 0 1px 0 rgba(255,255,255,.9) !important;
+  color: #17283d !important;
+}
+html[data-theme="light"] #servicios .arc-service-card::before {
+  background: linear-gradient(90deg, rgba(242,247,251,.97) 0%, rgba(235,242,248,.91) 46%, rgba(222,234,244,.72) 100%),
+              radial-gradient(circle at 88% 36%, rgba(48,143,205,.13), transparent 38%),
+              linear-gradient(180deg, rgba(255,255,255,.16), transparent 52%) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-bg {
+  opacity: .19 !important;
+  filter: saturate(.9) contrast(1.02) brightness(1.02) !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon {
+  display: grid !important;
+  place-items: center !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
+  border: 1px solid rgba(115, 164, 192, .42) !important;
+  border-radius: 22px !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(220,235,245,.88)) !important;
+  box-shadow: 0 9px 22px rgba(34, 76, 108, .13), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  color: #2cae72 !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 3px 5px rgba(31, 94, 67, .12)) !important;
+}
+html[data-theme="light"] #servicios .arc-service-content h3 {
+  color: #14283f !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.65) !important;
+}
+html[data-theme="light"] #servicios .arc-service-content p {
+  color: #4b5d70 !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li {
+  background: linear-gradient(100deg, rgba(255,255,255,.92), rgba(246,250,253,.88)) !important;
+  border-color: #cfdeea !important;
+  box-shadow: 0 3px 9px rgba(28, 54, 78, .045) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card:hover,
+html[data-theme="light"] #servicios .arc-service-card:focus-within,
+html[data-theme="light"] #servicios .arc-service-card:focus-visible,
+html[data-theme="light"] #servicios .arc-service-card.is-active {
+  border-color: #9fc7df !important;
+  box-shadow: 0 25px 48px rgba(27, 57, 82, .19), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-icon {
+    padding: 10px !important;
+    border-radius: 19px !important;
+  }
+}
+
+
+/* SoftReset: tema claro refinado, con profundidad y personalidad para los cuadros de la Home */
+html[data-theme="light"] #servicios .arc-service-card {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  border-radius: 22px !important;
+  border: 1px solid #b8d3e5 !important;
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(48, 164, 221, .19), transparent 38%),
+    radial-gradient(ellipse at 8% 96%, rgba(57, 176, 119, .10), transparent 34%),
+    linear-gradient(135deg, #f8fbff 0%, #e8f1f8 48%, #dce9f3 100%) !important;
+  box-shadow:
+    0 22px 46px rgba(24, 52, 78, .17),
+    0 5px 12px rgba(32, 74, 105, .07),
+    inset 0 1px 0 rgba(255,255,255,.98) !important;
+  color: #17283d !important;
+  transform: translateZ(0);
+}
+html[data-theme="light"] #servicios .arc-service-card::before {
+  background:
+    linear-gradient(112deg, rgba(246,250,254,.93) 0%, rgba(237,245,251,.82) 42%, rgba(220,235,246,.57) 100%),
+    radial-gradient(ellipse at 88% 28%, rgba(42, 151, 216, .15), transparent 42%),
+    radial-gradient(ellipse at 10% 90%, rgba(54, 173, 112, .09), transparent 34%) !important;
+  opacity: 1 !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-bg {
+  opacity: .27 !important;
+  filter: saturate(.98) contrast(1.06) brightness(1.02) !important;
+  transform: scale(1.025) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card--primary {
+  border-bottom: 4px solid transparent !important;
+  border-image: linear-gradient(90deg, #249cf0, #38b77a) 1 !important;
+}
+html[data-theme="light"] #servicios .arc-service-card--secondary {
+  border-bottom: 4px solid transparent !important;
+  border-image: linear-gradient(90deg, #38b77a, #249cf0) 1 !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon {
+  width: 86px !important;
+  height: 86px !important;
+  padding: 13px !important;
+  border: 1px solid rgba(100, 166, 202, .52) !important;
+  border-radius: 23px !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(220,238,248,.92)) !important;
+  box-shadow: 0 12px 25px rgba(29, 77, 111, .16), inset 0 1px 0 rgba(255,255,255,1) !important;
+  color: #27ad70 !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon img {
+  filter: saturate(1.18) contrast(1.06) drop-shadow(0 3px 6px rgba(31, 94, 67, .19)) !important;
+}
+html[data-theme="light"] #servicios .service-priority-badge {
+  border: 1px solid #8bcfff !important;
+  background: linear-gradient(110deg, #e8f5ff, #dcefff) !important;
+  box-shadow: 0 5px 14px rgba(34, 145, 213, .11), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  color: #0875b9 !important;
+}
+html[data-theme="light"] #servicios .arc-service-content h3 {
+  color: #142943 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.78) !important;
+}
+html[data-theme="light"] #servicios .arc-service-content p {
+  color: #435a72 !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li {
+  border: 1px solid #c6dceb !important;
+  border-radius: 13px !important;
+  background: linear-gradient(105deg, rgba(255,255,255,.96), rgba(240,247,252,.94)) !important;
+  box-shadow: 0 5px 12px rgba(29, 63, 91, .065), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li::before {
+  color: #2ca765 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8) !important;
+}
+html[data-theme="light"] #servicios .arc-service-link {
+  color: #172f49 !important;
+}
+html[data-theme="light"] #servicios .arc-service-link span {
+  border: 2px solid rgba(49, 171, 116, .54) !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.88), rgba(223,244,234,.88)) !important;
+  box-shadow: 0 5px 13px rgba(38, 139, 96, .12), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card:hover,
+html[data-theme="light"] #servicios .arc-service-card:focus-within,
+html[data-theme="light"] #servicios .arc-service-card:focus-visible,
+html[data-theme="light"] #servicios .arc-service-card.is-active {
+  border-color: #8bbfdf !important;
+  box-shadow: 0 28px 55px rgba(24, 52, 78, .21), 0 7px 16px rgba(32, 74, 105, .09), inset 0 1px 0 rgba(255,255,255,1) !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-card { border-radius: 20px !important; }
+  html[data-theme="light"] #servicios .arc-service-icon { width: 80px !important; height: 80px !important; padding: 11px !important; border-radius: 21px !important; }
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-bg { opacity: .24 !important; }
+}
+
+
+/* SoftReset: refinamiento del tema claro, más contraste y menos aspecto lavado */
+html[data-theme="light"] #servicios .arc-service-card {
+  border: 1px solid #b8c8d5 !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(ellipse at 92% 8%, rgba(66, 145, 190, .13), transparent 38%),
+    radial-gradient(ellipse at 8% 96%, rgba(70, 142, 111, .08), transparent 34%),
+    linear-gradient(145deg, #f0f3f5 0%, #e4eaee 48%, #d8e1e7 100%) !important;
+  box-shadow: 0 18px 38px rgba(27, 43, 57, .19), 0 4px 10px rgba(30, 52, 70, .08), inset 0 1px 0 rgba(255,255,255,.95) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card::before {
+  background: linear-gradient(125deg, rgba(247,249,250,.88), rgba(226,234,239,.72) 60%, rgba(208,222,231,.56)) !important;
+  opacity: 1 !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-bg {
+  opacity: .20 !important;
+  filter: saturate(.72) contrast(1.08) brightness(1.03) !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon {
+  width: 78px !important;
+  height: 78px !important;
+  padding: 12px !important;
+  border: 1px solid #b4c6d2 !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, #f9fbfc 0%, #dce5eb 100%) !important;
+  box-shadow: 0 9px 20px rgba(30, 54, 72, .15), inset 0 1px 0 rgba(255,255,255,.98) !important;
+  color: #27885a !important;
+}
+html[data-theme="light"] #servicios .arc-service-icon img {
+  filter: saturate(.82) brightness(.82) contrast(1.12) drop-shadow(0 2px 3px rgba(28, 81, 57, .22)) !important;
+}
+html[data-theme="light"] #servicios .service-priority-badge {
+  border: 1px solid #8bbbd7 !important;
+  background: linear-gradient(110deg, #dcebf4 0%, #c8e0ee 100%) !important;
+  box-shadow: 0 4px 10px rgba(30, 75, 101, .10), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  color: #155d87 !important;
+}
+html[data-theme="light"] #servicios .arc-service-content h3 {
+  color: #172b40 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.72) !important;
+}
+html[data-theme="light"] #servicios .arc-service-content p { color: #465867 !important; }
+html[data-theme="light"] #servicios .service-quick-benefits li {
+  border: 1px solid #c2d0da !important;
+  border-radius: 12px !important;
+  background: linear-gradient(105deg, rgba(250,252,253,.96), rgba(231,238,243,.96)) !important;
+  box-shadow: 0 4px 9px rgba(31, 51, 66, .07), inset 0 1px 0 rgba(255,255,255,.98) !important;
+}
+html[data-theme="light"] #servicios .service-quick-benefits li::before {
+  color: #278d59 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.8) !important;
+}
+html[data-theme="light"] #servicios .arc-service-link { color: #20394e !important; }
+html[data-theme="light"] #servicios .arc-service-link span {
+  border: 2px solid #8bc5ad !important;
+  background: linear-gradient(145deg, #f7fbf9, #dcefe6) !important;
+  box-shadow: 0 5px 12px rgba(37, 105, 76, .14), inset 0 1px 0 rgba(255,255,255,.98) !important;
+  color: #27865a !important;
+}
+html[data-theme="light"] #servicios .arc-service-card:hover,
+html[data-theme="light"] #servicios .arc-service-card:focus-within,
+html[data-theme="light"] #servicios .arc-service-card:focus-visible,
+html[data-theme="light"] #servicios .arc-service-card.is-active {
+  border-color: #8bb6ce !important;
+  box-shadow: 0 24px 44px rgba(27, 43, 57, .22), 0 6px 13px rgba(30, 52, 70, .10), inset 0 1px 0 rgba(255,255,255,.98) !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-icon { width: 74px !important; height: 74px !important; padding: 11px !important; border-radius: 19px !important; }
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-bg { opacity: .17 !important; }
+}
+
+/* Home: encabezado horizontal azul para las tarjetas del tema claro */
+html[data-theme="light"] #servicios .arc-service-card {
+  padding-top: 178px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-icon {
+  position: absolute !important;
+  z-index: 4 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 140px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 38px 17px !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(112deg, #102238 0%, #162d43 58%, #0c1c2d 100%) !important;
+  box-shadow: inset 0 -1px 0 rgba(91, 174, 225, .48), inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+  display: block !important;
+  width: 86px !important;
+  height: 68px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: left bottom !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  filter: none !important;
+  drop-shadow: none !important;
+}
+html[data-theme="light"] #servicios .arc-service-content {
+  position: relative !important;
+  z-index: 2 !important;
+}
+html[data-theme="light"] #servicios .service-priority-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 38px !important;
+  padding: 8px 17px !important;
+  border: 1px solid #8bc7e9 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(110deg, #e8f5fc 0%, #d6eaf5 100%) !important;
+  box-shadow: 0 7px 16px rgba(26, 90, 130, .12), inset 0 1px 0 rgba(255,255,255,.95) !important;
+  color: #155d87 !important;
+  letter-spacing: .11em !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-card { padding-top: 164px !important; }
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-icon {
+    height: 128px !important;
+    padding: 0 27px 15px !important;
+  }
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+    width: 78px !important;
+    height: 62px !important;
+  }
+}
+
+
+/* Ajuste solicitado: icono de cabecera más visible y badge con el degradado del CTA */
+html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+  width: 112px !important;
+  height: 86px !important;
+  object-fit: contain !important;
+  object-position: left bottom !important;
+}
+html[data-theme="light"] #servicios .service-priority-badge {
+  width: fit-content !important;
+  max-width: max-content !important;
+  background: linear-gradient(105deg, #2196f3 0%, #36a9b7 52%, #43ad63 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,.35) !important;
+  box-shadow: 0 7px 16px rgba(35, 143, 173, .22), inset 0 1px 0 rgba(255,255,255,.18) !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+    width: 100px !important;
+    height: 78px !important;
+  }
+}
+
+
+/* Corrección fina: igualar la presencia del icono en el encabezado claro al oscuro */
+html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+  width: 128px !important;
+  height: 98px !important;
+}
+@media (max-width: 640px) {
+  html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
+    width: 116px !important;
+    height: 88px !important;
+  }
+}

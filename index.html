@@ -305,6 +305,23 @@
 <p>© 2026 SoftReset. Limpieza, formateo y mantenimiento de PC &amp; notebooks.</p>
 </div>
 </footer>
+<script>
+// Conserva el tema elegido al navegar a otra página, incluso si el sitio se abre localmente como file://.
+(() => {
+  const root = document.documentElement;
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href') || '';
+    if (!/formateo-instalacion-windows\.html(?:[?#]|$)/i.test(href)) return;
+    const theme = root.dataset.theme === 'dark' ? 'dark' : 'light';
+    try { localStorage.setItem('softreset-theme', theme); } catch (_) {}
+    const destination = new URL(link.href, window.location.href);
+    destination.searchParams.set('theme', theme);
+    link.href = destination.href;
+  }, true);
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
