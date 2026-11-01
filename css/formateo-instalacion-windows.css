@@ -460,3 +460,85 @@ html[data-theme="light"] body.formateo-page .format-whatsapp-link {
     left: 5px !important;
   }
 }
+
+/* Ajuste solicitado: quitar las esquinas redondeadas de las cuatro tarjetas
+   de la página Formateo e Instalación de Windows, en ambos temas. */
+body.formateo-page.services-vertical-page .service-image-card,
+body.formateo-page.services-vertical-page .service-image-card .service-card-cover,
+body.formateo-page.services-vertical-page .service-image-card .service-card-heading,
+body.formateo-page.services-vertical-page .service-image-card .service-card-details {
+  border-radius: 0 !important;
+}
+
+
+/* CORRECCIÓN FORZADA: las imágenes forman parte del cuadro y no conservan esquinas propias.
+   Aplicada a las cuatro tarjetas, en ambos temas y en todas las resoluciones. */
+body.formateo-page .features .feature,
+body.formateo-page .features .feature-photo,
+body.formateo-page .features .feature-photo img,
+body.formateo-page .features .feature-photo::after,
+body.formateo-page .features .feature-card {
+  border-radius: 0 !important;
+}
+body.formateo-page .features .feature {
+  overflow: visible !important;
+}
+body.formateo-page .features .feature-photo {
+  left: 0 !important; right: 0 !important; top: 0 !important;
+  width: 100% !important; overflow: hidden !important;
+}
+body.formateo-page .features .feature-photo img {
+  display: block !important; width: 100% !important; height: 100% !important;
+  max-width: none !important; object-fit: cover !important;
+  object-position: center center !important; transform: none;
+}
+body.formateo-page .features .feature-card {
+  overflow: hidden !important;
+}
+
+
+/* Consistencia de las cuatro tarjetas, ambos temas y todas las pantallas. */
+html body .features > article.feature .feature-photo, html body .features > article.feature .feature-photo img, html body .features > article.feature .feature-photo::after, html body .features > article.feature .feature-card { border-radius:0 !important; }
+html body .features > article.feature .feature-photo { overflow:hidden !important; clip-path:inset(0) !important; }
+html body .features > article.feature .feature-photo img { display:block !important; width:100% !important; height:100% !important; min-width:100% !important; min-height:100% !important; max-width:none !important; object-fit:cover !important; object-position:center center !important; transform:none !important; clip-path:inset(0) !important; }
+
+
+/* CTA CONSULTAR SERVICIO: más compacto, centrado y elevado respecto de la barra flotante. */
+body.formateo-page .end {
+  padding: 8px 18px 64px !important;
+  background: #111619 !important;
+}
+body.formateo-page .end .end-cta-wrap {
+  width: 100% !important;
+  max-width: 380px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+body.formateo-page .end .end-consult-button {
+  width: min(100%, 330px) !important;
+  max-width: 330px !important;
+  min-height: 46px !important;
+  margin: 0 auto !important;
+  padding: 11px 18px !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  flex: 0 1 330px !important;
+  box-sizing: border-box !important;
+}
+@media (max-width: 600px) {
+  body.formateo-page .end {
+    padding: 4px 18px 64px !important;
+  }
+  body.formateo-page .end .end-cta-wrap {
+    max-width: 330px !important;
+  }
+  body.formateo-page .end .end-consult-button {
+    width: min(100%, 300px) !important;
+    max-width: 300px !important;
+    min-height: 44px !important;
+    font-size: 13px !important;
+  }
+}

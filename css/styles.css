@@ -10174,3 +10174,30 @@ html[data-theme="light"] #servicios .arc-service-card .arc-service-icon img {
     height: 88px !important;
   }
 }
+
+
+/* Las imágenes de las cuatro tarjetas llenan por completo el área visual.
+   La tarjeta controla el recorte; la imagen no conserva esquinas independientes. */
+body.formateo-page.services-vertical-page .service-image-card {
+  overflow: hidden !important;
+  border-radius: 0 !important;
+}
+body.formateo-page.services-vertical-page .service-image-card .service-card-cover {
+  width: 100% !important;
+  min-width: 0 !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+body.formateo-page.services-vertical-page .service-card-cover img,
+body.formateo-page.services-vertical-page .service-image-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+}
