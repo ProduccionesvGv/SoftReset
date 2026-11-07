@@ -10201,3 +10201,66 @@ body.formateo-page.services-vertical-page .service-image-card img {
   object-position: center center !important;
   border-radius: 0 !important;
 }
+
+
+/* V174 — Logo horizontal SoftReset con mayor presencia en Home y páginas internas compartidas */
+.site-header.site-header--horizontal-logo .brand-logo--horizontal img {
+  width: min(850px, 96vw) !important;
+  max-width: 100% !important;
+  max-height: 176px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+.site-header.site-header--horizontal-logo .header-content {
+  min-height: 174px !important;
+  height: 174px !important;
+}
+@media (max-width: 760px) {
+  .site-header.site-header--horizontal-logo .header-content {
+    min-height: 148px !important;
+    height: 148px !important;
+  }
+  .site-header.site-header--horizontal-logo .brand-logo--horizontal img {
+    width: min(680px, 96vw) !important;
+    max-height: 136px !important;
+  }
+}
+@media (max-width: 420px) {
+  .site-header.site-header--horizontal-logo .header-content {
+    min-height: 132px !important;
+    height: 132px !important;
+  }
+  .site-header.site-header--horizontal-logo .brand-logo--horizontal img {
+    width: 96vw !important;
+    max-height: 120px !important;
+  }
+}
+
+
+/* V175 — El fondo del encabezado coincide exactamente con el lienzo de los logos SoftReset. */
+html[data-theme="dark"] .site-header.site-header--horizontal-logo,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo > .container,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo .header-content,
+html[data-theme="dark"] .site-header.site-header--horizontal-logo .brand-logo--horizontal {
+  background-color: #080f1d !important;
+  background-image: none !important;
+  border-color: rgba(255,255,255,.08) !important;
+  box-shadow: none !important;
+}
+html[data-theme="light"] .site-header.site-header--horizontal-logo,
+html[data-theme="light"] .site-header.site-header--horizontal-logo > .container,
+html[data-theme="light"] .site-header.site-header--horizontal-logo .header-content,
+html[data-theme="light"] .site-header.site-header--horizontal-logo .brand-logo--horizontal {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: rgba(10,30,60,.08) !important;
+  box-shadow: none !important;
+}
+
+
+/* Subtítulo de marca restaurado bajo el logotipo horizontal */
+.brand-logo--horizontal { flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.brand-logo--horizontal img { display:block; }
+.brand-subtitle { display:block; font-size:9px; line-height:1.2; letter-spacing:1.35px; font-weight:700; text-align:center; color:#8b98a8; }
+html[data-theme="light"] .brand-subtitle { color:#64748b; }
+@media (max-width:700px) { .brand-subtitle { font-size:8px; letter-spacing:1px; } }

@@ -400,6 +400,14 @@ html body .features > article.feature .feature-card {
   }
 }
 
+
+/* Ajuste de presencia de marca: logo horizontal más grande */
+.header .nav { min-height: 132px !important; height: 132px !important; }
+.header .logo img { width: min(470px, 88vw) !important; max-height: 112px !important; height: auto !important; }
+@media (max-width:700px) {
+  .header .nav { min-height: 118px !important; height: 118px !important; }
+  .header .logo img { width: min(430px, 92vw) !important; max-height: 98px !important; }
+}
 </style>
 
 <style id="softreset-cta-bottom-space-fix">
@@ -442,9 +450,29 @@ html[data-theme="light"] body .end .end-cta-wrap {
 }
 
 </style>
+<style id="softreset-logo-background-match">
+/* El encabezado usa el mismo fondo plano que el logo de cada tema, sin rectángulos ni halos. */
+.header { background: #080f1d !important; background-image: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border-bottom-color: rgba(255,255,255,.08) !important; }
+html[data-theme="light"] .header { background: #ffffff !important; border-bottom-color: rgba(10,30,60,.08) !important; }
+html[data-theme="dark"] .header { background: #080f1d !important; }
+.header .logo img { width: min(760px, 94vw) !important; max-width: 100% !important; max-height: 132px !important; height: auto !important; object-fit: contain !important; }
+.nav { min-height: 144px !important; height: 144px !important; }
+@media (max-width: 700px) { .nav { min-height: 126px !important; height: 126px !important; } .header .logo img { width: 94vw !important; max-height: 112px !important; } }
+</style>
+
+<style id="softreset-logo-final-integration">
+.header { background:#fff !important; background-image:none !important; }
+html[data-theme="dark"] .header { background:#080f1d !important; }
+.header .nav { justify-content:center !important; }
+.header .logo { display:flex !important; flex-direction:column !important; align-items:stretch !important; justify-content:center !important; gap:0 !important; width:min(600px,94vw) !important; max-width:100% !important; margin:0 auto !important; }
+.header .logo img { display:block !important; width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain !important; margin:0 !important; background:transparent !important; }
+.header .logo .brand-subtitle { display:block !important; box-sizing:border-box !important; width:61% !important; margin:-1px 0 0 39% !important; padding:0 0 2px !important; font-size:clamp(10px,1.15vw,14px) !important; line-height:1.2 !important; letter-spacing:clamp(.6px,.1vw,1.05px) !important; font-weight:700 !important; text-align:center !important; white-space:nowrap !important; color:#64748b !important; }
+html[data-theme="dark"] .header .logo .brand-subtitle { color:#aab7c9 !important; }
+@media(max-width:600px) { .header .nav { min-height:0 !important; height:auto !important; padding:9px 0 12px !important; } .header .logo { width:96% !important; } .header .logo .brand-subtitle { font-size:clamp(9px,2.1vw,11px) !important; letter-spacing:.45px !important; } }
+</style>
 </head>
 <body>
-<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset, formateo e instalación de Windows"></a></div></header>
+<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset"><span class="brand-subtitle">FORMATEO E INSTALACIÓN DE WINDOWS</span></a></div></header>
 <main id="inicio">
 <section class="hero"><div class="wrap"><div class="hero-card"><span class="eyebrow">Formateo e instalación de Windows</span><h1>Tu PC lista para <span>volver a rendir.</span></h1></div></div></section>
 <section class="features" id="servicios" aria-label="Qué incluye el servicio">
@@ -518,5 +546,37 @@ html[data-theme="light"] body .end .end-cta-wrap {
 })();
 </script>
 
+
+<style id="softreset-subtitle-under-brand-name">
+/* El subtítulo queda debajo del nombre SoftReset, alineado con el texto y no con la notebook. */
+.site-header.site-header--horizontal-logo .brand-logo--horizontal { display:flex !important; flex-direction:column !important; align-items:stretch !important; justify-content:center !important; gap:0 !important; }
+.site-header.site-header--horizontal-logo .brand-logo--horizontal img { display:block !important; margin:0 auto !important; }
+.site-header.site-header--horizontal-logo .brand-logo--horizontal .brand-subtitle { display:block !important; box-sizing:border-box !important; width:65% !important; margin:0 0 0 35% !important; padding:0 !important; text-align:center !important; white-space:nowrap !important; font-size:clamp(7px, 1.05vw, 11px) !important; line-height:1.15 !important; letter-spacing:clamp(.55px, .13vw, 1.25px) !important; font-weight:700 !important; color:#8b98a8 !important; }
+html[data-theme="light"] .site-header.site-header--horizontal-logo .brand-subtitle { color:#64748b !important; }
+.header .logo { display:flex !important; flex-direction:column !important; align-items:stretch !important; justify-content:center !important; gap:0 !important; }
+.header .logo img { display:block !important; margin:0 auto !important; }
+.header .logo .brand-subtitle { display:block !important; box-sizing:border-box !important; width:65% !important; margin:0 0 0 35% !important; text-align:center !important; white-space:nowrap !important; font-size:clamp(7px, 1.05vw, 11px) !important; line-height:1.15 !important; letter-spacing:clamp(.55px, .13vw, 1.25px) !important; font-weight:700 !important; color:#8b98a8 !important; }
+html[data-theme="light"] .header .logo .brand-subtitle { color:#64748b !important; }
+@media(max-width:500px) { .site-header.site-header--horizontal-logo .brand-logo--horizontal .brand-subtitle, .header .logo .brand-subtitle { font-size:7px !important; letter-spacing:.5px !important; } }
+</style>
+
+
+<style id="softreset-unified-brand-header">
+.header { background:#ffffff !important; background-image:none !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border-bottom-color:rgba(10,30,60,.08) !important; }
+html[data-theme="dark"] .header { background:#080f1d !important; border-bottom-color:rgba(255,255,255,.08) !important; }
+.header .nav { min-height:156px !important; height:auto !important; padding:10px 0 13px !important; box-sizing:border-box !important; }
+.header .logo { width:min(600px,94vw) !important; max-width:100% !important; display:flex !important; flex-direction:column !important; align-items:stretch !important; justify-content:center !important; gap:0 !important; }
+.header .logo img { display:block !important; width:100% !important; max-width:100% !important; max-height:none !important; height:auto !important; object-fit:contain !important; margin:0 auto !important; }
+.header .logo .brand-subtitle { display:block !important; box-sizing:border-box !important; width:65% !important; margin:0 0 0 35% !important; padding:0 0 2px !important; font-size:clamp(10px,1.15vw,14px) !important; line-height:1.25 !important; letter-spacing:clamp(.7px,.12vw,1.2px) !important; font-weight:700 !important; text-align:center !important; white-space:nowrap !important; color:#64748b !important; }
+html[data-theme="dark"] .header .logo .brand-subtitle { color:#aab7c9 !important; }
+@media(max-width:600px) { .header .nav { min-height:120px !important; height:auto !important; padding:9px 0 11px !important; } .header .logo { width:96% !important; gap:0 !important; } .header .logo .brand-subtitle { font-size:clamp(9px,2.3vw,11px) !important; letter-spacing:.55px !important; } }
+</style>
+
 </body>
 </html>
+<style id="softreset-brand-subtitle-restored">
+.header .logo { flex-direction:column !important; gap:3px !important; }
+.header .logo .brand-subtitle { display:block; font-size:9px; line-height:1.2; letter-spacing:1.35px; font-weight:700; text-align:center; color:#8b98a8; }
+html[data-theme="light"] .header .logo .brand-subtitle { color:#64748b; }
+@media(max-width:700px) { .header .logo .brand-subtitle { font-size:8px; letter-spacing:1px; } }
+</style>
