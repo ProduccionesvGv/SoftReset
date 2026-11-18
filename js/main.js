@@ -377,6 +377,7 @@ if (formatFeatureButtons.length && formatDisplayTitle && formatDisplayText && fo
 
 // Barra flotante: prueba visual rápida al cargar y auto-ocultación con reaparición fiable.
 (() => {
+  if (document.getElementById('softreset-service-nav-idle-style')) return;
   const bars = Array.from(document.querySelectorAll('.mobile-bottom-bar'));
   if (!bars.length) return;
 
