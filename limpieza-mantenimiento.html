@@ -285,6 +285,17 @@ html body:not(#softreset-unused-nav-id) .mobile-bottom-bar { transition: transfo
 @media (prefers-reduced-motion: reduce) { html body:not(#softreset-unused-nav-id) .mobile-bottom-bar { transition: none !important; } }
 </style>
 <style id="softreset-option-five-style">html body .theme-toggle .softreset-option-five {transform:none!important;} html body .softreset-option-five .sr-moon {display:none;} html body .softreset-option-five .sr-sun {display:inline;} html[data-theme="dark"] body .softreset-option-five .sr-moon {display:inline;} html[data-theme="dark"] body .softreset-option-five .sr-sun {display:none;}</style>
+
+<style id="softreset-mobile-logo-width">
+@media (max-width: 600px) {
+ #siteHeader.limpieza-brand-header .limpieza-brand-nav { width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; padding:12px 0 !important; margin:0 auto !important; box-sizing:border-box !important; }
+ #siteHeader.limpieza-brand-header .limpieza-brand-link { width:94% !important; max-width:none !important; padding:0 !important; margin:0 auto !important; display:flex !important; flex-direction:column !important; gap:4px !important; }
+ html[data-theme="light"] #siteHeader.limpieza-brand-header .limpieza-brand-link img { content:url('assets/img/softreset-logo-horizontal-mobile.png') !important; }
+ html[data-theme="dark"] #siteHeader.limpieza-brand-header .limpieza-brand-link img { content:url('assets/img/softreset-logo-horizontal-dark-mobile.png') !important; }
+ #siteHeader.limpieza-brand-header .limpieza-brand-link img { width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain !important; margin:0 auto !important; padding:0 !important; flex-shrink:0 !important; }
+ #siteHeader.limpieza-brand-header .limpieza-brand-link .brand-subtitle { width:67% !important; margin:0 0 0 33% !important; font-size:clamp(7px,2.05vw,12px) !important; letter-spacing:.1px !important; white-space:nowrap !important; text-align:center !important; }
+}
+</style>
 </head>
 <body class="service-detail-page limpieza-page">
 <header class="limpieza-brand-header" id="siteHeader">

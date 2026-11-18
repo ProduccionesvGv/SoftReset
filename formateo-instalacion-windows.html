@@ -581,6 +581,17 @@ html body .features > article.feature#programas-oficina::before {
   top: -26px !important;
 }
 </style>
+
+<style id="softreset-mobile-logo-width">
+@media (max-width: 600px) {
+ html body .header .nav { width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; padding:12px 0 !important; margin:0 auto !important; box-sizing:border-box !important; }
+ html body .header .logo { width:94% !important; max-width:none !important; padding:0 !important; margin:0 auto !important; display:flex !important; flex-direction:column !important; gap:4px !important; }
+ html[data-theme="light"] body .header .logo img { content:url('assets/img/softreset-logo-horizontal-mobile.png') !important; }
+ html[data-theme="dark"] body .header .logo img { content:url('assets/img/softreset-logo-horizontal-dark-mobile.png') !important; }
+ html body .header .logo img { width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain !important; margin:0 auto !important; padding:0 !important; flex-shrink:0 !important; }
+ html body .header .logo .brand-subtitle { width:67% !important; margin:0 0 0 33% !important; font-size:clamp(7px,2.05vw,12px) !important; letter-spacing:.1px !important; white-space:nowrap !important; text-align:center !important; }
+}
+</style>
 </head>
 <body>
 <header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset"><span class="brand-subtitle">FORMATEO E INSTALACIÓN DE WINDOWS</span></a></div></header>
