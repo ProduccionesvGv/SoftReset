@@ -582,19 +582,10 @@ html body .features > article.feature#programas-oficina::before {
 }
 </style>
 
-<style id="softreset-mobile-logo-width">
-@media (max-width: 600px) {
- html body .header .nav { width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; padding:12px 0 !important; margin:0 auto !important; box-sizing:border-box !important; }
- html body .header .logo { width:94% !important; max-width:none !important; padding:0 !important; margin:0 auto !important; display:flex !important; flex-direction:column !important; gap:4px !important; }
- html[data-theme="light"] body .header .logo img { content:url('assets/img/softreset-logo-horizontal-mobile.png') !important; }
- html[data-theme="dark"] body .header .logo img { content:url('assets/img/softreset-logo-horizontal-dark-mobile.png') !important; }
- html body .header .logo img { width:100% !important; max-width:100% !important; height:auto !important; max-height:none !important; object-fit:contain !important; margin:0 auto !important; padding:0 !important; flex-shrink:0 !important; }
- html body .header .logo .brand-subtitle { width:67% !important; margin:0 0 0 33% !important; font-size:clamp(7px,2.05vw,12px) !important; letter-spacing:.1px !important; white-space:nowrap !important; text-align:center !important; }
-}
-</style>
+
 </head>
 <body>
-<header class="header"><div class="wrap nav"><a class="logo" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset"><span class="brand-subtitle">FORMATEO E INSTALACIÓN DE WINDOWS</span></a></div></header>
+<header id="softresetFormateoHeader" class="header softreset-brand-fixed"><div class="wrap nav softreset-brand-row"><a class="logo softreset-brand-link" href="#inicio" aria-label="SoftReset, inicio"><img id="softresetThemeLogo" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png" alt="SoftReset"><span class="brand-subtitle">FORMATEO E INSTALACIÓN DE WINDOWS</span></a></div></header>
 <main id="inicio">
 <section class="hero"><div class="wrap"><div class="hero-card"><span class="eyebrow">Formateo e instalación de Windows</span><h1>Tu PC lista para <span>volver a rendir.</span></h1></div></div></section>
 <section class="features" id="servicios" aria-label="Qué incluye el servicio">
@@ -717,4 +708,13 @@ html[data-theme="dark"] .header .logo .brand-subtitle { color:#aab7c9 !important
 .header .logo .brand-subtitle { display:block; font-size:9px; line-height:1.2; letter-spacing:1.35px; font-weight:700; text-align:center; color:#8b98a8; }
 html[data-theme="light"] .header .logo .brand-subtitle { color:#64748b; }
 @media(max-width:700px) { .header .logo .brand-subtitle { font-size:8px; letter-spacing:1px; } }
+</style>
+
+<style id="softreset-responsive-brand-corrected">
+html body header#siteHeader, html body header.header.softreset-brand-fixed { overflow:visible !important; height:auto !important; min-height:0 !important; }
+html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) > .softreset-brand-row { display:flex !important; justify-content:center !important; align-items:center !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; margin:0 !important; padding:12px 0 !important; box-sizing:border-box !important; }
+html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) .softreset-brand-link { display:flex !important; flex-direction:column !important; align-items:center !important; justify-content:center !important; width:min(600px,96%) !important; max-width:none !important; height:auto !important; min-height:0 !important; padding:0 !important; margin:0 auto !important; gap:2px !important; overflow:visible !important; }
+html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) .softreset-brand-link img { display:block !important; content:normal !important; width:100% !important; max-width:none !important; height:auto !important; min-height:0 !important; max-height:none !important; aspect-ratio:1800 / 236 !important; object-fit:contain !important; margin:0 !important; padding:0 !important; flex:none !important; visibility:visible !important; opacity:1 !important; position:static !important; transform:none !important; }
+html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) .softreset-brand-link .brand-subtitle { width:65% !important; margin:0 0 0 35% !important; font-size:clamp(8px,1.65vw,13px) !important; letter-spacing:.2px !important; white-space:normal !important; text-align:center !important; }
+@media(max-width:700px){ html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) .softreset-brand-link img { width:137% !important; max-width:none !important; } html body header.softreset-brand-fixed:is(#siteHeader,#softresetFormateoHeader) .softreset-brand-link { overflow:hidden !important; } }
 </style>
