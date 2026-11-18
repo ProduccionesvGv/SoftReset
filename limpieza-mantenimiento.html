@@ -37,10 +37,149 @@ html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy h2{color:#f3f6fa}
 html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy p{color:#c2cedb}
 html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy li{color:#e1e8f0}
 @media(max-width:600px){.limpieza-page .cleaning-vertical-list{gap:34px;padding:18px 0 28px}.limpieza-page .cleaning-vertical-image{height:clamp(240px,70vw,340px)}.limpieza-page .cleaning-vertical-copy{width:calc(100% - 22px);margin:-42px auto 0;padding:22px 19px 24px}.limpieza-page .cleaning-vertical-copy h2{font-size:27px}.limpieza-page .cleaning-vertical-copy p{font-size:14px}.limpieza-page .cleaning-vertical-copy li{font-size:13px}.limpieza-page .cleaning-vertical-cta{padding-inline:12px}}
+
+/* Presentación principal de Limpieza, siguiendo el encabezado de Formateo */
+.limpieza-page .limpieza-presentation{padding:34px 0 26px;background:#f5f7fb}
+.limpieza-page .limpieza-presentation-inner{box-sizing:border-box;width:100%;max-width:1080px;margin:0 auto;padding:42px 46px 44px;border:1px solid #d9e0e8;border-radius:28px;background:#f0f2f4;color:#171d27}
+.limpieza-page .limpieza-presentation-kicker{display:block;margin:0 0 22px;color:#287fc5;font-size:clamp(11px,1.2vw,14px);font-weight:850;letter-spacing:.18em}
+.limpieza-page .limpieza-presentation-kicker:before{content:"";display:inline-block;width:28px;height:3px;margin:0 13px 3px 0;background:#5598e8}
+.limpieza-page .limpieza-presentation h1{max-width:850px;margin:0;font-size:clamp(36px,6vw,64px);line-height:1.04;letter-spacing:-.045em;font-weight:850;color:#171d27}
+.limpieza-page .cleaning-vertical-list{padding-top:12px}
+html[data-theme="dark"] .limpieza-page .limpieza-presentation{background:#0b111b}
+html[data-theme="dark"] .limpieza-page .limpieza-presentation-inner{background:#171d25;border-color:rgba(255,255,255,.13);color:#f3f5f8}
+html[data-theme="dark"] .limpieza-page .limpieza-presentation h1{color:#f3f5f8}
+html[data-theme="dark"] .limpieza-page .limpieza-presentation-kicker{color:#9bcaff}
+@media(max-width:600px){.limpieza-page .limpieza-presentation{padding:24px 0 18px}.limpieza-page .limpieza-presentation-inner{padding:30px 22px 34px;border-radius:22px}.limpieza-page .limpieza-presentation-kicker{margin-bottom:18px;font-size:10px;letter-spacing:.14em}.limpieza-page .limpieza-presentation h1{font-size:clamp(34px,9vw,46px);line-height:1.05}}
+
+</style>
+
+
+<style id="limpieza-final-layout-adjustments">
+/* Márgenes del bloque de presentación: igual que la referencia de Formateo */
+.limpieza-page .format-showcase-section > .container{width:100%;max-width:100%;box-sizing:border-box;padding-left:16px;padding-right:16px}
+.limpieza-page .limpieza-presentation{padding:26px 0 20px;background:transparent}
+.limpieza-page .limpieza-presentation-inner{width:100%;max-width:1080px;margin:0 auto;padding:38px 32px 40px;border-radius:28px}
+/* Separadores discretos entre los servicios */
+.limpieza-page .cleaning-vertical-list{gap:0;padding:22px 0 20px}
+.limpieza-page .cleaning-vertical-card{padding-bottom:34px;margin-bottom:34px;border-bottom:1px solid rgba(110,130,150,.22)}
+.limpieza-page .cleaning-vertical-card:last-of-type{border-bottom:0;margin-bottom:12px;padding-bottom:0}
+html[data-theme="dark"] .limpieza-page .cleaning-vertical-card{border-bottom-color:rgba(255,255,255,.13)}
+.limpieza-page .cleaning-vertical-cta{padding:10px 24px 28px}
+.limpieza-page .cleaning-vertical-cta .format-whatsapp-link{min-height:52px;padding:12px 30px;min-width:min(335px,90%)}
+/* Pie compacto y barra inferior ordenada, sin superposición */
+.limpieza-page .service-detail-footer{margin:0!important;padding:0 16px!important;min-height:0!important;height:auto!important;border-top:1px solid rgba(120,140,160,.16)}
+.limpieza-page .service-detail-footer .container{padding:0!important;min-height:0!important;height:auto!important}
+.limpieza-page .service-detail-footer p{margin:0!important;padding:18px 0 22px!important;line-height:1.45!important;text-align:center}
+.limpieza-page .mobile-bottom-bar{box-sizing:border-box!important;width:calc(100% - 40px)!important;max-width:620px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;display:flex!important;align-items:center!important;gap:8px!important;padding:8px 10px!important}
+.limpieza-page .mobile-bottom-links{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;flex:1 1 auto!important;min-width:0!important;gap:4px!important}
+.limpieza-page .mobile-bottom-links a{display:flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;white-space:nowrap!important;font-size:clamp(11px,2.8vw,14px)!important;padding:10px 2px!important}
+.limpieza-page .mobile-bottom-bar .theme-toggle{position:static!important;flex:0 0 48px!important;width:48px!important;height:48px!important;margin:0!important}
+.limpieza-page{padding-bottom:82px!important}
+@media(max-width:600px){
+ .limpieza-page .format-showcase-section > .container{padding-left:16px;padding-right:16px}
+ .limpieza-page .limpieza-presentation{padding:22px 0 16px}
+ .limpieza-page .limpieza-presentation-inner{padding:30px 22px 32px;border-radius:24px}
+ .limpieza-page .cleaning-vertical-list{gap:0;padding:16px 0 14px}
+ .limpieza-page .cleaning-vertical-card{padding-bottom:26px;margin-bottom:26px}
+ .limpieza-page .cleaning-vertical-card:last-of-type{margin-bottom:8px;padding-bottom:0}
+ .limpieza-page .cleaning-vertical-cta{padding:8px 8px 24px}
+ .limpieza-page .service-detail-footer p{padding:16px 0 18px!important;font-size:13px}
+ .limpieza-page .mobile-bottom-bar{width:calc(100% - 28px)!important;gap:5px!important;padding:7px 8px!important}
+ .limpieza-page .mobile-bottom-links{gap:1px!important}
+ .limpieza-page .mobile-bottom-links a{font-size:11px!important;letter-spacing:-.2px;padding:9px 0!important}
+ .limpieza-page .mobile-bottom-bar .theme-toggle{flex-basis:44px!important;width:44px!important;height:44px!important}
+}
+</style>
+
+
+<style id="softreset-limpieza-bottom-bar-fix">
+/* Corrección definitiva: esta página no debe heredar el display:grid de Formateo. */
+body.limpieza-page .mobile-bottom-bar {
+  box-sizing:border-box !important; display:flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:space-between !important;
+  position:fixed !important; left:50% !important; right:auto !important;
+  bottom:12px !important; transform:translateX(-50%) !important;
+  width:calc(100% - 28px) !important; max-width:620px !important;
+  min-height:64px !important; padding:7px 9px !important; gap:6px !important;
+  z-index:1000 !important;
+}
+body.limpieza-page .mobile-bottom-links {
+  display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:center !important; flex:1 1 auto !important; min-width:0 !important;
+  width:auto !important; gap:2px !important;
+}
+body.limpieza-page .mobile-bottom-links a {
+  display:flex !important; align-items:center !important; justify-content:center !important;
+  min-width:0 !important; margin:0 !important; padding:10px 1px !important;
+  white-space:nowrap !important; text-align:center !important;
+  font-size:clamp(10px,2.5vw,14px) !important; line-height:1.15 !important;
+  letter-spacing:0 !important; flex:none !important;
+}
+body.limpieza-page .mobile-bottom-bar .theme-toggle {
+  position:static !important; display:grid !important; place-items:center !important;
+  flex:0 0 46px !important; width:46px !important; min-width:46px !important;
+  height:46px !important; margin:0 !important; padding:0 !important;
+}
+body.limpieza-page { padding-bottom:92px !important; }
+body.limpieza-page .service-detail-footer {
+  height:auto !important; min-height:0 !important; margin:0 !important;
+  padding:0 14px !important;
+}
+body.limpieza-page .service-detail-footer .container {
+  height:auto !important; min-height:0 !important; padding:0 !important;
+}
+body.limpieza-page .service-detail-footer p {
+  margin:0 !important; padding:17px 0 20px !important;
+  line-height:1.4 !important; text-align:center !important;
+}
+@media (min-width:760px) {
+  body.limpieza-page .mobile-bottom-bar {
+    left:auto !important; right:22px !important; width:56px !important;
+    max-width:56px !important; min-height:56px !important; padding:6px !important;
+    transform:none !important; justify-content:center !important;
+  }
+  body.limpieza-page .mobile-bottom-links { display:none !important; }
+}
+@media (max-width:380px) {
+  body.limpieza-page .mobile-bottom-bar { width:calc(100% - 20px) !important; gap:3px !important; padding:6px !important; }
+  body.limpieza-page .mobile-bottom-links a { font-size:10px !important; }
+  body.limpieza-page .mobile-bottom-bar .theme-toggle { flex-basis:42px !important; width:42px !important; min-width:42px !important; height:42px !important; }
+}
+</style>
+
+
+<style id="softreset-limpieza-reduce-final-gap">
+/* Reduce el espacio vacío entre el botón de consulta y el pie de página.
+   La página de Limpieza usa contenido vertical, no necesita centrar el main
+   dentro de una altura mínima de pantalla como las páginas antiguas. */
+body.service-detail-page.limpieza-page main.service-detail-main {
+  display:block !important;
+  align-items:initial !important;
+  min-height:0 !important;
+  height:auto !important;
+  padding:0 !important;
+  margin:0 !important;
+}
+body.service-detail-page.limpieza-page .format-showcase-section {
+  padding:0 0 12px !important;
+  margin:0 !important;
+}
+body.service-detail-page.limpieza-page .cleaning-vertical-list {
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+body.service-detail-page.limpieza-page .cleaning-vertical-cta {
+  padding-bottom:12px !important;
+  margin-bottom:0 !important;
+}
+@media (max-width:600px) {
+  body.service-detail-page.limpieza-page .format-showcase-section { padding-bottom:8px !important; }
+  body.service-detail-page.limpieza-page .cleaning-vertical-cta { padding-bottom:8px !important; }
+}
 </style>
 
 </head>
-<body class="service-detail-page formateo-page limpieza-page">
+<body class="service-detail-page limpieza-page">
 <header class="site-header site-header--horizontal-logo" id="siteHeader">
 <div class="container header-content">
 <a aria-label="Volver al inicio de SoftReset" class="brand brand-logo brand-logo--horizontal" href="index.html#inicio">
@@ -51,22 +190,23 @@ html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy li{color:#e1e8f0}
 <main class="service-detail-main limpieza-detail-main">
 <section class="format-showcase-section">
 <div class="container">
+<section class="limpieza-presentation" aria-labelledby="limpiezaPresentationTitle"><div class="limpieza-presentation-inner"><span class="limpieza-presentation-kicker">LIMPIEZA Y MANTENIMIENTO</span><h1 id="limpiezaPresentationTitle">Tu Notebook necesita un buen mantenimiento.</h1></div></section>
 <div class="cleaning-vertical-list" id="limpiezaShowcase">
 <article class="cleaning-vertical-card" id="limpieza-ventiladores">
   <div class="cleaning-vertical-image"><img src="assets/img/limpieza-ventiladores.webp" alt="Limpieza de ventiladores de notebook" loading="lazy"></div>
-  <div class="cleaning-vertical-copy"><span class="cleaning-step">01 · MANTENIMIENTO</span><h2>Limpieza de ventiladores</h2><p>Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo.</p><ul><li>Limpieza de turbina, ventilador y rejillas</li><li>Retiro de polvo interno acumulado</li><li>Revisión del flujo de aire del equipo</li></ul></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">MANTENIMIENTO</span><h2>Limpieza de ventiladores</h2><p>Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo.</p><ul><li>Limpieza de turbina, ventilador y rejillas</li><li>Retiro de polvo interno acumulado</li><li>Revisión del flujo de aire del equipo</li></ul></div>
 </article>
 <article class="cleaning-vertical-card" id="pasta-termica">
   <div class="cleaning-vertical-image"><img src="assets/img/pasta-termica-arctic-mx.webp" alt="Pasta térmica Arctic MX" loading="lazy"></div>
-  <div class="cleaning-vertical-copy"><span class="cleaning-step">02 · DISIPACIÓN TÉRMICA</span><h2>Pasta térmica Arctic MX y pads térmicos</h2><p>Recambio de pasta térmica y revisión de pads térmicos para mejorar la transferencia de calor en CPU, GPU y zonas de disipación.</p><ul><li>Retiro de pasta térmica anterior</li><li>Aplicación de pasta térmica de calidad tipo Arctic MX</li><li>Revisión de pads térmicos y reemplazo si corresponde</li><li>Control de contacto correcto con el disipador</li></ul></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">DISIPACIÓN TÉRMICA</span><h2>Pasta térmica Arctic MX y pads térmicos</h2><p>Recambio de pasta térmica y revisión de pads térmicos para mejorar la transferencia de calor en CPU, GPU y zonas de disipación.</p><ul><li>Retiro de pasta térmica anterior</li><li>Aplicación de pasta térmica de calidad tipo Arctic MX</li><li>Revisión de pads térmicos y reemplazo si corresponde</li><li>Control de contacto correcto con el disipador</li></ul></div>
 </article>
 <article class="cleaning-vertical-card" id="limpieza-hardware">
   <div class="cleaning-vertical-image"><img src="assets/img/limpieza-hardware-interno.webp" alt="Limpieza de hardware interno de computadora" loading="lazy"></div>
-  <div class="cleaning-vertical-copy"><span class="cleaning-step">03 · LIMPIEZA INTERNA</span><h2>Limpieza de hardware interno</h2><p>Limpieza cuidadosa de los componentes internos para retirar suciedad acumulada y mejorar el estado general del equipo.</p><ul><li>Limpieza de mother, memorias y conectores</li><li>Revisión de disco, ranuras y zonas internas accesibles</li><li>Retiro de polvo en componentes principales</li><li>Limpieza externa general del equipo</li></ul></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">LIMPIEZA INTERNA</span><h2>Limpieza de hardware interno</h2><p>Limpieza cuidadosa de los componentes internos para retirar suciedad acumulada y mejorar el estado general del equipo.</p><ul><li>Limpieza de mother, memorias y conectores</li><li>Revisión de disco, ranuras y zonas internas accesibles</li><li>Retiro de polvo en componentes principales</li><li>Limpieza externa general del equipo</li></ul></div>
 </article>
 <article class="cleaning-vertical-card" id="control-temperatura">
   <div class="cleaning-vertical-image"><img src="assets/img/limpieza.png" alt="Control de temperatura y diagnóstico del equipo" loading="lazy"></div>
-  <div class="cleaning-vertical-copy"><span class="cleaning-step">04 · REVISIÓN FINAL</span><h2>Control de temperatura y diagnóstico</h2><p>Revisión final para comprobar que el equipo quede funcionando de forma estable después del mantenimiento físico.</p><ul><li>Control de temperatura antes y después del servicio</li><li>Revisión básica de encendido y funcionamiento</li><li>Verificación de ruido y comportamiento del ventilador</li><li>Diagnóstico general del estado del equipo</li></ul></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">REVISIÓN FINAL</span><h2>Control de temperatura y diagnóstico</h2><p>Revisión final para comprobar que el equipo quede funcionando de forma estable después del mantenimiento físico.</p><ul><li>Control de temperatura antes y después del servicio</li><li>Revisión básica de encendido y funcionamiento</li><li>Verificación de ruido y comportamiento del ventilador</li><li>Diagnóstico general del estado del equipo</li></ul></div>
 </article>
 <div class="cleaning-vertical-cta"><a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a></div>
 </div>
