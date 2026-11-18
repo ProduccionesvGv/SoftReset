@@ -44,6 +44,7 @@ html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy li{color:#e1e8f0}
 .limpieza-page .limpieza-presentation-kicker{display:block;margin:0 0 22px;color:#287fc5;font-size:clamp(11px,1.2vw,14px);font-weight:850;letter-spacing:.18em}
 .limpieza-page .limpieza-presentation-kicker:before{content:"";display:inline-block;width:28px;height:3px;margin:0 13px 3px 0;background:#5598e8}
 .limpieza-page .limpieza-presentation h1{max-width:850px;margin:0;font-size:clamp(36px,6vw,64px);line-height:1.04;letter-spacing:-.045em;font-weight:850;color:#171d27}
+.limpieza-page .limpieza-presentation h1 span{color:#279cf0 !important}
 .limpieza-page .cleaning-vertical-list{padding-top:12px}
 html[data-theme="dark"] .limpieza-page .limpieza-presentation{background:#0b111b}
 html[data-theme="dark"] .limpieza-page .limpieza-presentation-inner{background:#171d25;border-color:rgba(255,255,255,.13);color:#f3f5f8}
@@ -61,9 +62,12 @@ html[data-theme="dark"] .limpieza-page .limpieza-presentation-kicker{color:#9bca
 .limpieza-page .limpieza-presentation-inner{width:100%;max-width:1080px;margin:0 auto;padding:38px 32px 40px;border-radius:28px}
 /* Separadores discretos entre los servicios */
 .limpieza-page .cleaning-vertical-list{gap:0;padding:22px 0 20px}
-.limpieza-page .cleaning-vertical-card{padding-bottom:34px;margin-bottom:34px;border-bottom:1px solid rgba(110,130,150,.22)}
-.limpieza-page .cleaning-vertical-card:last-of-type{border-bottom:0;margin-bottom:12px;padding-bottom:0}
-html[data-theme="dark"] .limpieza-page .cleaning-vertical-card{border-bottom-color:rgba(255,255,255,.13)}
+/* Imagen a sangre: ocupa el ancho hasta el borde interno de la página. */
+.limpieza-page .cleaning-vertical-image{width:calc(100% + 32px);margin-left:-16px}
+/* Separador replicado del diseño de formateo-instalacion-windows.html. */
+.limpieza-page .cleaning-vertical-card{padding-bottom:0;margin-bottom:42px;border-bottom:0}
+.limpieza-page .cleaning-vertical-card + .cleaning-vertical-card:before{content:"";position:absolute;left:8%;right:8%;top:-22px;height:1px;background:linear-gradient(90deg,transparent,rgba(220,235,245,.22) 18%,rgba(220,235,245,.22) 82%,transparent);pointer-events:none}
+.limpieza-page .cleaning-vertical-card:last-of-type{margin-bottom:12px;padding-bottom:0}
 .limpieza-page .cleaning-vertical-cta{padding:10px 24px 28px}
 .limpieza-page .cleaning-vertical-cta .format-whatsapp-link{min-height:52px;padding:12px 30px;min-width:min(335px,90%)}
 /* Pie compacto y barra inferior ordenada, sin superposición */
@@ -80,7 +84,9 @@ html[data-theme="dark"] .limpieza-page .cleaning-vertical-card{border-bottom-col
  .limpieza-page .limpieza-presentation{padding:22px 0 16px}
  .limpieza-page .limpieza-presentation-inner{padding:30px 22px 32px;border-radius:24px}
  .limpieza-page .cleaning-vertical-list{gap:0;padding:16px 0 14px}
- .limpieza-page .cleaning-vertical-card{padding-bottom:26px;margin-bottom:26px}
+ .limpieza-page .cleaning-vertical-image{width:calc(100% + 32px);margin-left:-16px}
+ .limpieza-page .cleaning-vertical-card{padding-bottom:0;margin-bottom:36px}
+ .limpieza-page .cleaning-vertical-card + .cleaning-vertical-card:before{top:-19px;left:10%;right:10%}
  .limpieza-page .cleaning-vertical-card:last-of-type{margin-bottom:8px;padding-bottom:0}
  .limpieza-page .cleaning-vertical-cta{padding:8px 8px 24px}
  .limpieza-page .service-detail-footer p{padding:16px 0 18px!important;font-size:13px}
@@ -176,13 +182,126 @@ body.service-detail-page.limpieza-page .cleaning-vertical-cta {
   body.service-detail-page.limpieza-page .format-showcase-section { padding-bottom:8px !important; }
   body.service-detail-page.limpieza-page .cleaning-vertical-cta { padding-bottom:8px !important; }
 }
+/* Ajuste de presentación: replica el contenedor hero de Formateo e instalación */
+body.service-detail-page.limpieza-page .limpieza-presentation {
+  box-sizing:border-box !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:30px 25px 24px !important;
+  background:#101820 !important;
+}
+body.service-detail-page.limpieza-page .limpieza-presentation-inner {
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:36px 26px 38px !important;
+  border:1px solid rgba(255,255,255,.13) !important;
+  border-radius:22px !important;
+  background:rgba(21,29,37,.96) !important;
+  color:#f3f5f8 !important;
+  box-shadow:0 22px 60px rgba(0,0,0,.22) !important;
+}
+body.service-detail-page.limpieza-page .limpieza-presentation-kicker {
+  margin:0 0 20px !important;
+  color:#9bcaff !important;
+  font-size:clamp(10px,1.2vw,13px) !important;
+  line-height:1.3 !important;
+  font-weight:850 !important;
+  letter-spacing:.16em !important;
+}
+body.service-detail-page.limpieza-page .limpieza-presentation-kicker:before {
+  width:22px !important; height:3px !important; margin:0 12px 3px 0 !important;
+  background:#269eea !important;
+}
+body.service-detail-page.limpieza-page .limpieza-presentation h1 {
+  max-width:680px !important;
+  margin:0 !important;
+  color:#f3f5f8 !important;
+  font-size:clamp(34px,6.5vw,52px) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.045em !important;
+  font-weight:850 !important;
+}
+@media(max-width:600px) {
+  body.service-detail-page.limpieza-page .limpieza-presentation { padding:24px 16px 20px !important; }
+  body.service-detail-page.limpieza-page .limpieza-presentation-inner { padding:28px 24px 30px !important; border-radius:20px !important; }
+  body.service-detail-page.limpieza-page .limpieza-presentation h1 { font-size:clamp(32px,7.2vw,44px) !important; line-height:1.08 !important; }
+}
+
+
 </style>
 
+
+
+<style id="limpieza-presentation-fullbleed-final">
+/* Presentación a ancho completo: el fondo llega de borde a borde del viewport. */
+html body.service-detail-page.limpieza-page .limpieza-presentation {
+  position:relative !important;
+  box-sizing:border-box !important;
+  width:100vw !important;
+  max-width:none !important;
+  left:50% !important;
+  margin-left:-50vw !important;
+  margin-right:0 !important;
+  padding:30px clamp(16px, 3.5vw, 40px) 24px !important;
+  background:#f5f7fb !important;
+}
+html[data-theme="dark"] body.service-detail-page.limpieza-page .limpieza-presentation {
+  background:#0b111b !important;
+}
+html body.service-detail-page.limpieza-page .limpieza-presentation-inner {
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:1400px !important;
+  margin:0 auto !important;
+  padding:36px clamp(24px, 4vw, 52px) 38px !important;
+}
+html body.service-detail-page.limpieza-page .limpieza-presentation h1 {
+  max-width:950px !important;
+}
+@media(max-width:600px) {
+  html body.service-detail-page.limpieza-page .limpieza-presentation {
+    padding:22px 14px 18px !important;
+  }
+  html body.service-detail-page.limpieza-page .limpieza-presentation-inner {
+    width:100% !important;
+    padding:28px 22px 30px !important;
+  }
+  html body.service-detail-page.limpieza-page .limpieza-presentation h1 {
+    max-width:none !important;
+  }
+}
+</style>
+
+<style id="limpieza-header-formato">
+body.limpieza-page > .limpieza-brand-header { position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid rgba(10,30,60,.08); padding:0; margin:0; }
+html[data-theme="dark"] body.limpieza-page > .limpieza-brand-header { background:#080f1d; border-bottom-color:rgba(255,255,255,.08); }
+.limpieza-brand-header .limpieza-brand-nav { box-sizing:border-box; width:calc(100% - 48px); max-width:1200px; margin:0 auto; min-height:0; padding:10px 0 13px; display:flex; align-items:center; justify-content:center; }
+.limpieza-brand-header .limpieza-brand-link { display:flex; flex-direction:column; align-items:stretch; justify-content:center; gap:0; width:min(600px,94vw); max-width:100%; margin:0 auto; text-decoration:none; }
+.limpieza-brand-header .limpieza-brand-link img { display:block; width:100%; max-width:100%; height:auto; max-height:100px; object-fit:contain; margin:0 auto; }
+.limpieza-brand-header .brand-subtitle { display:block; box-sizing:border-box; width:65%; margin:0 0 0 35%; padding:0 0 2px; font-size:clamp(10px,1.15vw,14px); line-height:1.25; letter-spacing:clamp(.7px,.12vw,1.2px); font-weight:700; text-align:center; white-space:nowrap; color:#64748b; }
+html[data-theme="dark"] .limpieza-brand-header .brand-subtitle { color:#aab7c9; }
+@media(max-width:700px){ .limpieza-brand-header .limpieza-brand-nav { width:calc(100% - 30px); } }
+@media(max-width:600px){ .limpieza-brand-header .limpieza-brand-nav { padding:9px 0 11px; } .limpieza-brand-header .limpieza-brand-link { width:96%; } .limpieza-brand-header .limpieza-brand-link img { max-height:85px; } .limpieza-brand-header .brand-subtitle { font-size:clamp(7px,1.8vw,11px); letter-spacing:.45px; } }
+</style>
+<style id="limpieza-sticky-scroll-fix">
+/* Evitar que overflow-x:hidden cree un contenedor de scroll para sticky. */
+html:has(> body.limpieza-page), body.service-detail-page.limpieza-page {
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+body.limpieza-page > #siteHeader.limpieza-brand-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+</style>
 </head>
 <body class="service-detail-page limpieza-page">
-<header class="site-header site-header--horizontal-logo" id="siteHeader">
-<div class="container header-content">
-<a aria-label="Volver al inicio de SoftReset" class="brand brand-logo brand-logo--horizontal" href="index.html#inicio">
+<header class="limpieza-brand-header" id="siteHeader">
+<div class="limpieza-brand-nav">
+<a aria-label="Volver al inicio de SoftReset" class="limpieza-brand-link" href="index.html#inicio">
 <img alt="SoftReset - Formateo e instalación de Windows" src="assets/img/softreset-logo-horizontal.png" data-logo-light="assets/img/softreset-logo-horizontal.png" data-logo-dark="assets/img/softreset-logo-horizontal-dark.png"/><span class="brand-subtitle">FORMATEO E INSTALACIÓN DE WINDOWS</span>
 </a>
 </div>
@@ -190,7 +309,7 @@ body.service-detail-page.limpieza-page .cleaning-vertical-cta {
 <main class="service-detail-main limpieza-detail-main">
 <section class="format-showcase-section">
 <div class="container">
-<section class="limpieza-presentation" aria-labelledby="limpiezaPresentationTitle"><div class="limpieza-presentation-inner"><span class="limpieza-presentation-kicker">LIMPIEZA Y MANTENIMIENTO</span><h1 id="limpiezaPresentationTitle">Tu Notebook necesita un buen mantenimiento.</h1></div></section>
+<section class="limpieza-presentation" aria-labelledby="limpiezaPresentationTitle"><div class="limpieza-presentation-inner"><span class="limpieza-presentation-kicker">LIMPIEZA Y MANTENIMIENTO</span><h1 id="limpiezaPresentationTitle">Menos temperatura, más <span>rendimiento.</span></h1></div></section>
 <div class="cleaning-vertical-list" id="limpiezaShowcase">
 <article class="cleaning-vertical-card" id="limpieza-ventiladores">
   <div class="cleaning-vertical-image"><img src="assets/img/limpieza-ventiladores.webp" alt="Limpieza de ventiladores de notebook" loading="lazy"></div>
