@@ -17,6 +17,28 @@ html[data-theme="dark"] .site-header.site-header--horizontal-logo { background:#
 html[data-theme="dark"] .site-header.site-header--horizontal-logo .brand-logo--horizontal .brand-subtitle { color:#aab7c9 !important; }
 @media(max-width:600px) { .site-header.site-header--horizontal-logo .header-content { min-height:0 !important; padding:9px 0 12px !important; } .site-header.site-header--horizontal-logo .brand-logo--horizontal { width:96% !important; } .site-header.site-header--horizontal-logo .brand-logo--horizontal .brand-subtitle { font-size:clamp(9px,2.1vw,11px) !important; letter-spacing:.45px !important; } }
 </style>
+
+<style id="limpieza-vertical-layout">
+.limpieza-page .cleaning-vertical-list{display:grid;gap:46px;padding:28px 0 36px}
+.limpieza-page .cleaning-vertical-card{position:relative;isolation:isolate;display:flex;flex-direction:column;margin:0 auto;width:100%;max-width:1080px}
+.limpieza-page .cleaning-vertical-image{height:clamp(270px,48vw,470px);width:100%;overflow:hidden;background:#111c2b}
+.limpieza-page .cleaning-vertical-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.limpieza-page .cleaning-vertical-copy{position:relative;z-index:1;width:calc(100% - 48px);margin:-76px auto 0;padding:28px 32px 30px;background:rgba(255,255,255,.97);color:#172b42;border:1px solid #dce4ed;box-shadow:0 18px 42px rgba(16,36,58,.13)}
+.limpieza-page .cleaning-step{display:block;margin-bottom:9px;color:#2388c9;font-size:11px;font-weight:850;letter-spacing:.16em}
+.limpieza-page .cleaning-vertical-copy h2{margin:0 0 12px;font-size:clamp(26px,3.5vw,40px);line-height:1.1;color:#172b42}
+.limpieza-page .cleaning-vertical-copy p{margin:0 0 16px;color:#52657c;font-size:16px;line-height:1.55}
+.limpieza-page .cleaning-vertical-copy ul{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.limpieza-page .cleaning-vertical-copy li{position:relative;padding-left:28px;color:#263b52;font-size:14px;line-height:1.4;font-weight:650}
+.limpieza-page .cleaning-vertical-copy li:before{content:'✓';position:absolute;left:0;top:-1px;color:#32a968;font-size:19px;font-weight:900}
+.limpieza-page .cleaning-vertical-cta{display:flex;justify-content:center;padding:0 24px 12px}
+.limpieza-page .cleaning-vertical-cta .format-whatsapp-link{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:12px 28px;border-radius:999px;background:linear-gradient(110deg,#247be1,#1f9d91);color:#fff;font-weight:800;text-decoration:none}
+html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy{background:rgba(20,30,43,.97);border-color:rgba(255,255,255,.12);color:#f3f6fa;box-shadow:0 18px 42px rgba(0,0,0,.28)}
+html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy h2{color:#f3f6fa}
+html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy p{color:#c2cedb}
+html[data-theme="dark"] .limpieza-page .cleaning-vertical-copy li{color:#e1e8f0}
+@media(max-width:600px){.limpieza-page .cleaning-vertical-list{gap:34px;padding:18px 0 28px}.limpieza-page .cleaning-vertical-image{height:clamp(240px,70vw,340px)}.limpieza-page .cleaning-vertical-copy{width:calc(100% - 22px);margin:-42px auto 0;padding:22px 19px 24px}.limpieza-page .cleaning-vertical-copy h2{font-size:27px}.limpieza-page .cleaning-vertical-copy p{font-size:14px}.limpieza-page .cleaning-vertical-copy li{font-size:13px}.limpieza-page .cleaning-vertical-cta{padding-inline:12px}}
+</style>
+
 </head>
 <body class="service-detail-page formateo-page limpieza-page">
 <header class="site-header site-header--horizontal-logo" id="siteHeader">
@@ -29,39 +51,25 @@ html[data-theme="dark"] .site-header.site-header--horizontal-logo .brand-logo--h
 <main class="service-detail-main limpieza-detail-main">
 <section class="format-showcase-section">
 <div class="container">
-<div class="format-showcase reveal" id="limpiezaShowcase">
-<div class="format-feature-list" role="list">
-<button class="format-feature-button active" data-alt="Limpieza de ventiladores de notebook" data-image="assets/img/limpieza-ventiladores.webp" data-items="Limpieza de turbina, ventilador y rejillas|Retiro de polvo interno acumulado|Revisión del flujo de aire del equipo" data-mobile-position="50% center" data-mobile-scale="1.08" data-step="01" data-text="Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo." data-title="Limpieza de ventiladores" role="listitem" type="button">
-<span>Limpieza de ventiladores</span>
-<strong aria-hidden="true">−</strong>
-</button>
-<button class="format-feature-button" data-alt="Cambio de pasta térmica en procesador" data-image="assets/img/pasta-termica-arctic-mx.webp" data-items="Retiro de pasta térmica anterior|Aplicación de pasta térmica de calidad tipo Arctic MX|Revisión de pads térmicos y reemplazo si corresponde|Control de contacto correcto con el disipador" data-mobile-position="50% center" data-mobile-scale="1.06" data-step="02" data-text="Recambio de pasta térmica y revisión de pads térmicos para mejorar la transferencia de calor en CPU, GPU y zonas de disipación." data-title="Pasta térmica Arctic MX y pads térmicos" role="listitem" type="button">
-<span>Pasta térmica Arctic MX y pads térmicos</span>
-<strong aria-hidden="true">+</strong>
-</button>
-<button class="format-feature-button" data-alt="Limpieza de hardware interno de computadora" data-image="assets/img/limpieza-hardware-interno.webp" data-items="Limpieza de mother, memorias y conectores|Revisión de disco, ranuras y zonas internas accesibles|Retiro de polvo en componentes principales|Limpieza externa general del equipo" data-mobile-position="52% center" data-mobile-scale="1.05" data-step="03" data-text="Limpieza cuidadosa de los componentes internos para retirar suciedad acumulada y mejorar el estado general del equipo." data-title="Limpieza de hardware interno" role="listitem" type="button">
-<span>Limpieza de hardware interno</span>
-<strong aria-hidden="true">+</strong>
-</button>
-<button class="format-feature-button" data-alt="Control de temperatura y diagnóstico del equipo" data-image="assets/img/limpieza.png" data-items="Control de temperatura antes y después del servicio|Revisión básica de encendido y funcionamiento|Verificación de ruido y comportamiento del ventilador|Diagnóstico general del estado del equipo" data-mobile-position="55% center" data-mobile-scale="1.10" data-step="04" data-text="Revisión final para comprobar que el equipo quede funcionando de forma estable después del mantenimiento físico." data-title="Control de temperatura y diagnóstico" role="listitem" type="button">
-<span>Control de temperatura y diagnóstico</span>
-<strong aria-hidden="true">+</strong>
-</button>
+<div class="cleaning-vertical-list" id="limpiezaShowcase">
+<article class="cleaning-vertical-card" id="limpieza-ventiladores">
+  <div class="cleaning-vertical-image"><img src="assets/img/limpieza-ventiladores.webp" alt="Limpieza de ventiladores de notebook" loading="lazy"></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">01 · MANTENIMIENTO</span><h2>Limpieza de ventiladores</h2><p>Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo.</p><ul><li>Limpieza de turbina, ventilador y rejillas</li><li>Retiro de polvo interno acumulado</li><li>Revisión del flujo de aire del equipo</li></ul></div>
+</article>
+<article class="cleaning-vertical-card" id="pasta-termica">
+  <div class="cleaning-vertical-image"><img src="assets/img/pasta-termica-arctic-mx.webp" alt="Pasta térmica Arctic MX" loading="lazy"></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">02 · DISIPACIÓN TÉRMICA</span><h2>Pasta térmica Arctic MX y pads térmicos</h2><p>Recambio de pasta térmica y revisión de pads térmicos para mejorar la transferencia de calor en CPU, GPU y zonas de disipación.</p><ul><li>Retiro de pasta térmica anterior</li><li>Aplicación de pasta térmica de calidad tipo Arctic MX</li><li>Revisión de pads térmicos y reemplazo si corresponde</li><li>Control de contacto correcto con el disipador</li></ul></div>
+</article>
+<article class="cleaning-vertical-card" id="limpieza-hardware">
+  <div class="cleaning-vertical-image"><img src="assets/img/limpieza-hardware-interno.webp" alt="Limpieza de hardware interno de computadora" loading="lazy"></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">03 · LIMPIEZA INTERNA</span><h2>Limpieza de hardware interno</h2><p>Limpieza cuidadosa de los componentes internos para retirar suciedad acumulada y mejorar el estado general del equipo.</p><ul><li>Limpieza de mother, memorias y conectores</li><li>Revisión de disco, ranuras y zonas internas accesibles</li><li>Retiro de polvo en componentes principales</li><li>Limpieza externa general del equipo</li></ul></div>
+</article>
+<article class="cleaning-vertical-card" id="control-temperatura">
+  <div class="cleaning-vertical-image"><img src="assets/img/limpieza.png" alt="Control de temperatura y diagnóstico del equipo" loading="lazy"></div>
+  <div class="cleaning-vertical-copy"><span class="cleaning-step">04 · REVISIÓN FINAL</span><h2>Control de temperatura y diagnóstico</h2><p>Revisión final para comprobar que el equipo quede funcionando de forma estable después del mantenimiento físico.</p><ul><li>Control de temperatura antes y después del servicio</li><li>Revisión básica de encendido y funcionamiento</li><li>Verificación de ruido y comportamiento del ventilador</li><li>Diagnóstico general del estado del equipo</li></ul></div>
+</article>
+<div class="cleaning-vertical-cta"><a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a></div>
 </div>
-<article aria-live="polite" class="format-display"><div class="format-display-title"><h3 id="formatDisplayTitle">Limpieza de ventiladores</h3></div>
-<div aria-hidden="true" class="format-display-media" style="--format-bg: url('assets/img/limpieza-ventiladores.webp');">
-<img alt="Limpieza de ventiladores de notebook" id="formatDisplayImage" src="assets/img/limpieza-ventiladores.webp" style="--format-mobile-position: 50% center; --format-mobile-scale: 1.08;"/>
-</div><div class="format-display-copy"><p id="formatDisplayText">Limpieza del sistema de ventilación para mejorar el flujo de aire, reducir temperatura y evitar ruido excesivo.</p><ul id="formatDisplayList">
-<li>Limpieza de turbina, ventilador y rejillas</li>
-<li>Retiro de polvo interno acumulado</li>
-<li>Revisión del flujo de aire del equipo</li>
-</ul></div></article>
-<section aria-label="Consulta del servicio de limpieza y mantenimiento" class="format-controls-zone limpieza-controls-bottom">
-<div class="format-showcase-actions">
-<a class="format-whatsapp-link" href="index.html#contacto">Consultar este servicio</a>
-</div>
-</section>
-
 </div>
 </div>
 </section>
